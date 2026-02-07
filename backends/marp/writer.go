@@ -19,7 +19,7 @@ func NewWriter() *Writer {
 // WriteFile writes a deck to a Marp Markdown file.
 func (w *Writer) WriteFile(deck *model.Deck, path string) error {
 	content := w.Encode(deck)
-	return os.WriteFile(path, []byte(content), 0644)
+	return os.WriteFile(path, []byte(content), 0600)
 }
 
 // Encode converts a Deck to Marp Markdown string.
