@@ -203,6 +203,13 @@ func (e *TOONEncoder) encodeAudio(b *strings.Builder, a *model.Audio) {
 	}
 }
 
+// EncodeSlide encodes a single slide to TOON format.
+func (e *TOONEncoder) EncodeSlide(s *model.Slide) string {
+	var b strings.Builder
+	e.encodeSlide(&b, s)
+	return b.String()
+}
+
 // EncodeDiff encodes a diff to TOON format.
 func (e *TOONEncoder) EncodeDiff(d *model.Diff) string {
 	var b strings.Builder
