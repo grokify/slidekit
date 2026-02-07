@@ -12,13 +12,13 @@ slidekit provides deterministic CLI and MCP (Model Context Protocol) interfaces 
 
 ## Features
 
-- **Canonical data model** - Unified representation for slides, sections, blocks, and audio metadata
-- **Multi-format support** - Marp Markdown (implemented), Google Slides, Reveal.js (planned)
-- **TOON output** - Token-Optimized Object Notation for efficient AI consumption (~8x smaller than JSON)
-- **Lossless round-tripping** - Parse and regenerate without data loss
-- **Speaker notes** - Full support for presenter notes with SSML markers
-- **LMS integration** - Section-based structure for educational platform export (Udemy, Teachable)
-- **Plan/Apply workflow** - Safe, reviewable changes before mutation
+- 📦 **Canonical data model** - Unified representation for slides, sections, blocks, and audio metadata
+- 🔄 **Multi-format support** - Marp Markdown (implemented), Google Slides, Reveal.js (planned)
+- ⚡ **TOON output** - Token-Optimized Object Notation for efficient AI consumption (~8x smaller than JSON)
+- 🔁 **Lossless round-tripping** - Parse and regenerate without data loss
+- 🎤 **Speaker notes** - Full support for presenter notes with SSML markers
+- 🎓 **LMS integration** - Section-based structure for educational platform export (Udemy, Teachable)
+- ✅ **Plan/Apply workflow** - Safe, reviewable changes before mutation
 
 ## Installation
 
