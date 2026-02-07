@@ -43,7 +43,7 @@
     },
     {
       "version": "v0.1.0",
-      "date": "2026-01-26",
+      "date": "2026-02-07",
       "highlights": [
         { "description": "Initial release with canonical slide model, Marp backend, and TOON format" }
       ],

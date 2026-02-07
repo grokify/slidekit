@@ -1,6 +1,6 @@
 # Release Notes - v0.1.0
 
-**Release Date**: 2026-01-26
+**Release Date**: 2026-02-07
 
 This is the initial release of slidekit, an AI-optimized toolkit for reading, modifying, and generating slide decks across multiple presentation formats.
 
