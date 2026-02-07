@@ -1,0 +1,67 @@
+{
+  "ir_version": "1.0",
+  "project": "slidekit",
+  "repository": "https://github.com/grokify/slidekit",
+  "versioning": "semver",
+  "commit_convention": "conventional",
+  "maintainers": ["grokify"],
+  "releases": [
+    {
+      "version": "v0.2.0",
+      "date": "2026-02-07",
+      "highlights": [
+        { "description": "Cobra CLI with read, plan, apply, create, and serve commands" },
+        { "description": "MCP server for AI assistant integration with 7 presentation tools" },
+        { "description": "Shared operations layer (`ops` package) powering both CLI and MCP" }
+      ],
+      "added": [
+        { "description": "`slidekit read` command to output presentations in TOON or JSON format", "commit": "8f34fcf" },
+        { "description": "`slidekit plan` command to compute diff between current and desired state", "commit": "8f34fcf" },
+        { "description": "`slidekit apply` command to apply changes with `--confirm` requirement", "commit": "8f34fcf" },
+        { "description": "`slidekit create` command to create presentations from stdin JSON", "commit": "8f34fcf" },
+        { "description": "`slidekit serve` command to start MCP server on stdio", "commit": "8f34fcf" },
+        { "description": "MCP `read_deck` tool to read presentations in TOON/JSON format", "commit": "55c4076" },
+        { "description": "MCP `list_slides` tool to list slide IDs and titles", "commit": "55c4076" },
+        { "description": "MCP `get_slide` tool to retrieve single slide by ID", "commit": "55c4076" },
+        { "description": "MCP `plan_changes` tool to compute diff between states", "commit": "55c4076" },
+        { "description": "MCP `apply_changes` tool to apply diff with confirmation requirement", "commit": "55c4076" },
+        { "description": "MCP `create_deck` tool to create new presentations", "commit": "55c4076" },
+        { "description": "MCP `update_slide` tool to update single slide with confirmation", "commit": "55c4076" },
+        { "description": "`ops` package with shared logic: `ReadDeck`, `PlanChanges`, `ApplyChanges`, `CreateDeck`", "commit": "f24e1e4" },
+        { "description": "`ops` package slide operations: `ListSlides`, `GetSlide`, `UpdateSlide`", "commit": "f24e1e4" },
+        { "description": "Backend registry for managing presentation backends", "commit": "f24e1e4" },
+        { "description": "`EncodeSlide` method to TOONEncoder for single slide encoding", "commit": "2c1246b" }
+      ],
+      "tests": [
+        { "description": "27 unit tests for `ops` package with real file I/O", "commit": "f24e1e4" },
+        { "description": "11 integration tests for MCP tools", "commit": "55c4076" }
+      ],
+      "dependencies": [
+        { "description": "Added `github.com/spf13/cobra` v1.10.0 for CLI framework", "commit": "f7b228d" },
+        { "description": "Added `github.com/modelcontextprotocol/go-sdk` v1.2.0 for MCP server", "commit": "f7b228d" }
+      ]
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2026-01-26",
+      "highlights": [
+        { "description": "Initial release with canonical slide model, Marp backend, and TOON format" }
+      ],
+      "added": [
+        { "description": "Canonical data model: `Deck`, `Section`, `Slide`, `Block`, `Audio`, `Diff`", "commit": "initial" },
+        { "description": "Marp Markdown reader with frontmatter, directives, and speaker notes parsing", "commit": "initial" },
+        { "description": "Marp Markdown writer with lossless round-tripping", "commit": "initial" },
+        { "description": "Backend interface: `Read`, `Write`, `Plan`, `Apply`, `Create`", "commit": "initial" },
+        { "description": "TOON encoder for token-optimized AI output (~8x smaller than JSON)", "commit": "initial" },
+        { "description": "7 slide layouts: title, title_body, title_two_col, section, blank, image, comparison", "commit": "initial" },
+        { "description": "7 block types: paragraph, bullet, numbered, code, image, quote, heading", "commit": "initial" },
+        { "description": "Audio metadata support for TTS and video generation", "commit": "initial" },
+        { "description": "Section detection via `_class: section-divider` directives", "commit": "initial" }
+      ],
+      "tests": [
+        { "description": "30 test cases covering reader, writer, and TOON encoder", "commit": "initial" },
+        { "description": "Real-world validation with 65-slide production deck", "commit": "initial" }
+      ]
+    }
+  ]
+}

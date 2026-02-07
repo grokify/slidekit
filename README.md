@@ -37,6 +37,55 @@ go get github.com/grokify/slidekit
 
 ## Quick Start
 
+### CLI Usage
+
+```bash
+# Read a presentation (TOON format, optimized for AI)
+slidekit read presentation.md
+
+# Read with JSON output
+slidekit read presentation.md --format json
+
+# Plan changes (show diff)
+slidekit plan presentation.md --desired updated.json
+
+# Apply changes (requires confirmation)
+slidekit apply presentation.md --diff changes.json --confirm
+
+# Create a new presentation from JSON
+echo '{"title": "My Deck", "sections": [...]}' | slidekit create new.md
+
+# Start MCP server for AI assistant integration
+slidekit serve
+```
+
+### MCP Server Integration
+
+Configure Claude Code to use slidekit as an MCP server:
+
+```json
+{
+  "mcpServers": {
+    "slidekit": {
+      "command": "/path/to/slidekit",
+      "args": ["serve"]
+    }
+  }
+}
+```
+
+Available MCP tools:
+
+| Tool | Description |
+|------|-------------|
+| `read_deck` | Read presentation in TOON/JSON format |
+| `list_slides` | List slide IDs and titles |
+| `get_slide` | Get single slide by ID |
+| `plan_changes` | Compute diff between states |
+| `apply_changes` | Apply diff (requires confirm=true) |
+| `create_deck` | Create new presentation |
+| `update_slide` | Update single slide (requires confirm=true) |
+
 ### Parse a Marp Markdown file
 
 ```go
@@ -151,6 +200,7 @@ section fundamentals
 ## Roadmap
 
 - [x] **Phase 1**: Marp Markdown reader/writer, TOON format, canonical model
+- [x] **Phase 1.5**: CLI and MCP server for AI assistant integration
 - [ ] **Phase 2**: Google Slides integration (read/write/sync)
 - [ ] **Phase 3**: Reveal.js HTML generation
 - [ ] **Phase 4**: LMS/Video integration (Udemy export, audio assignment)
